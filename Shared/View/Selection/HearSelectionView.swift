@@ -14,7 +14,9 @@ struct HearSelectionView: View {
     let language: String
     
     var body: some View {
-        Text(language)
+        VStack {
+            Text(language)
+        }
     }
 }
 
