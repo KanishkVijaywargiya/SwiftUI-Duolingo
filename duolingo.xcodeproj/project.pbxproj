@@ -13,6 +13,9 @@
 		0425B6902667765300C87ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B67B2667764F00C87ED9 /* ContentView.swift */; };
 		0425B6912667765300C87ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425B67C2667765200C87ED9 /* Assets.xcassets */; };
 		0425B6922667765300C87ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425B67C2667765200C87ED9 /* Assets.xcassets */; };
+		0425B6A12667AA9C00C87ED9 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B6A02667AA9C00C87ED9 /* GetStartedView.swift */; };
+		0425B6A62667BDD700C87ED9 /* HearSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B6A52667BDD700C87ED9 /* HearSelectionView.swift */; };
+		0425B6A82667BDEB00C87ED9 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B6A72667BDEB00C87ED9 /* LanguageSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		0425B6892667765300C87ED9 /* duolingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duolingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425B68B2667765300C87ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0425B68C2667765300C87ED9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		0425B6A02667AA9C00C87ED9 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		0425B6A52667BDD700C87ED9 /* HearSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearSelectionView.swift; sourceTree = "<group>"; };
+		0425B6A72667BDEB00C87ED9 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,11 @@
 		0425B6792667764F00C87ED9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0425B69B266776B300C87ED9 /* Model */,
+				0425B69C266776CC00C87ED9 /* View */,
+				0425B69D266776DA00C87ED9 /* ViewModel */,
+				0425B69E2667770100C87ED9 /* Api */,
+				0425B69F2667770C00C87ED9 /* Utils */,
 				0425B67A2667764F00C87ED9 /* duolingoApp.swift */,
 				0425B67B2667764F00C87ED9 /* ContentView.swift */,
 				0425B67C2667765200C87ED9 /* Assets.xcassets */,
@@ -88,6 +99,60 @@
 				0425B68C2667765300C87ED9 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		0425B69B266776B300C87ED9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0425B69C266776CC00C87ED9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0425B6A42667BDC600C87ED9 /* Selection */,
+				0425B6A22667ADF700C87ED9 /* Welcome */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0425B69D266776DA00C87ED9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0425B69E2667770100C87ED9 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		0425B69F2667770C00C87ED9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0425B6A22667ADF700C87ED9 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				0425B6A02667AA9C00C87ED9 /* GetStartedView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		0425B6A42667BDC600C87ED9 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				0425B6A52667BDD700C87ED9 /* HearSelectionView.swift */,
+				0425B6A72667BDEB00C87ED9 /* LanguageSelectionView.swift */,
+			);
+			path = Selection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0425B6A82667BDEB00C87ED9 /* LanguageSelectionView.swift in Sources */,
 				0425B68F2667765300C87ED9 /* ContentView.swift in Sources */,
+				0425B6A12667AA9C00C87ED9 /* GetStartedView.swift in Sources */,
 				0425B68D2667765300C87ED9 /* duolingoApp.swift in Sources */,
+				0425B6A62667BDD700C87ED9 /* HearSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
