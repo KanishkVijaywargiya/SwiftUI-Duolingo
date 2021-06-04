@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct HearSelectionView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @State private var hasTitle = true
-    
     let language: String
     
     var body: some View {
