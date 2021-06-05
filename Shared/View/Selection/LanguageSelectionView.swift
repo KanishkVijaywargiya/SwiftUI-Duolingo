@@ -1,8 +1,8 @@
 //
-//  LanguageSelectionVIew.swift
+//  LanguageSelectionView2.swift
 //  duolingo (iOS)
 //
-//  Created by KANISHK VIJAYWARGIYA on 02/06/21.
+//  Created by KANISHK VIJAYWARGIYA on 05/06/21.
 //
 
 import SwiftUI
@@ -10,39 +10,31 @@ import SwiftUI
 struct LanguageSelectionView: View {
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var hasTitle = true
-    @State private var selectedlanguage = "Hindi"
-    
-    let languages =
-        [
-            "Hindi","English", "Gujarati", "Punjabi", "Bengali", "Bhojpuri", "Telugu", "Tamil", "Kannada", "Marathi", "Malayalam", "Nepali", "Sanskrit", "Urdu", "Rajasthani", "Assamese", "Haryanvi"
-        ]
-    
     init() {
         UITableView.appearance().showsVerticalScrollIndicator = false
     }
     
     var body: some View {
-        NavigationView {
+        ZStack {
+            NavigationView {
+                Text("")
+            }
+            .navigationBarHidden(true)
+            Color.white.edgesIgnoringSafeArea(.all)
+            
             List {
-                ForEach(languages, id: \.self) { language in
-                    NavigationLink(destination: HearSelectionView(language: language)
-                                    .onAppear {
-                                        self.hasTitle = false
-                                    }
-                                    .onDisappear {
-                                        self.hasTitle = true
-                                    }
-                    ) {
+                ForEach(languages) { language in
+                    NavigationLink(destination: HearSelectionView()) {
                         HStack {
                             Image("cover")
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 50, height:50)
+                                .frame(maxWidth: 50, maxHeight: 50)
+                                .padding([.horizontal, .vertical], 8.0)
                             
-                            Text(language)
-                                .font(.system(size: 20, weight: .semibold))
-                                .padding(.horizontal, 15)
+                            Text("\(language.lang)")
+                                .font(.system(size: 24, weight: .semibold))
+                                .foregroundColor(language.color)
                         }
                     }
                 }
@@ -53,17 +45,9 @@ struct LanguageSelectionView: View {
             )
             .padding(.vertical, 10)
             .padding(.horizontal, 20)
-            .navigationBarTitle(self.hasTitle ? Text("I want to learn...") : Text(""), displayMode: .large)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "arrow.backward")
-                    }
-                }
-            }
-            .navigationBarHidden(self.hasTitle ? false : true)
+            .padding(.top, 80)
+            
+            CustomNavigationView(title: "I want to learn...", image: "arrow.backward")
         }
     }
 }

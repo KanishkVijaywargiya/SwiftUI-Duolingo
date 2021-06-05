@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04099EA9266BC1AB008E11FF /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EA8266BC1AB008E11FF /* GetStartedView.swift */; };
+		04099EAB266BC4BF008E11FF /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EAA266BC4BF008E11FF /* LanguageSelectionView.swift */; };
+		04099EAD266BC551008E11FF /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EAC266BC551008E11FF /* CustomNavigationView.swift */; };
+		04099EAF266BC64E008E11FF /* HearSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EAE266BC64E008E11FF /* HearSelectionView.swift */; };
+		04099EB1266BC715008E11FF /* Hear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EB0266BC715008E11FF /* Hear.swift */; };
+		04099EB4266BCCEC008E11FF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EB3266BCCEC008E11FF /* LoginView.swift */; };
+		04099EB6266BCCF4008E11FF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EB5266BCCF4008E11FF /* RegisterView.swift */; };
+		04099EB8266BD010008E11FF /* SignInButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04099EB7266BD010008E11FF /* SignInButtons.swift */; };
+		0424D9BF266B5CD5007BEBA7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424D9BE266B5CD5007BEBA7 /* ListView.swift */; };
+		0424D9C4266B6F8D007BEBA7 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424D9C3266B6F8D007BEBA7 /* Demo.swift */; };
+		0424D9C8266B8838007BEBA7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424D9C7266B8838007BEBA7 /* Language.swift */; };
+		0424D9CA266B89BF007BEBA7 /* LanguageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424D9C9266B89BF007BEBA7 /* LanguageListViewModel.swift */; };
 		0425B68D2667765300C87ED9 /* duolingoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B67A2667764F00C87ED9 /* duolingoApp.swift */; };
 		0425B68E2667765300C87ED9 /* duolingoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B67A2667764F00C87ED9 /* duolingoApp.swift */; };
 		0425B68F2667765300C87ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B67B2667764F00C87ED9 /* ContentView.swift */; };
 		0425B6902667765300C87ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B67B2667764F00C87ED9 /* ContentView.swift */; };
 		0425B6912667765300C87ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425B67C2667765200C87ED9 /* Assets.xcassets */; };
 		0425B6922667765300C87ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425B67C2667765200C87ED9 /* Assets.xcassets */; };
-		0425B6A12667AA9C00C87ED9 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B6A02667AA9C00C87ED9 /* GetStartedView.swift */; };
-		0425B6A62667BDD700C87ED9 /* HearSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B6A52667BDD700C87ED9 /* HearSelectionView.swift */; };
-		0425B6A82667BDEB00C87ED9 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B6A72667BDEB00C87ED9 /* LanguageSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04099EA8266BC1AB008E11FF /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		04099EAA266BC4BF008E11FF /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
+		04099EAC266BC551008E11FF /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		04099EAE266BC64E008E11FF /* HearSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearSelectionView.swift; sourceTree = "<group>"; };
+		04099EB0266BC715008E11FF /* Hear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hear.swift; sourceTree = "<group>"; };
+		04099EB3266BCCEC008E11FF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		04099EB5266BCCF4008E11FF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		04099EB7266BD010008E11FF /* SignInButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtons.swift; sourceTree = "<group>"; };
+		0424D9BE266B5CD5007BEBA7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		0424D9C3266B6F8D007BEBA7 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		0424D9C7266B8838007BEBA7 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		0424D9C9266B89BF007BEBA7 /* LanguageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListViewModel.swift; sourceTree = "<group>"; };
 		0425B67A2667764F00C87ED9 /* duolingoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duolingoApp.swift; sourceTree = "<group>"; };
 		0425B67B2667764F00C87ED9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0425B67C2667765200C87ED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,9 +48,6 @@
 		0425B6892667765300C87ED9 /* duolingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duolingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425B68B2667765300C87ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0425B68C2667765300C87ED9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		0425B6A02667AA9C00C87ED9 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
-		0425B6A52667BDD700C87ED9 /* HearSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearSelectionView.swift; sourceTree = "<group>"; };
-		0425B6A72667BDEB00C87ED9 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04099EB2266BCCD3008E11FF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				04099EB3266BCCEC008E11FF /* LoginView.swift */,
+				04099EB5266BCCF4008E11FF /* RegisterView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		0424D9C0266B60C7007BEBA7 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				0424D9BE266B5CD5007BEBA7 /* ListView.swift */,
+				0424D9C3266B6F8D007BEBA7 /* Demo.swift */,
+				04099EAC266BC551008E11FF /* CustomNavigationView.swift */,
+				04099EB7266BD010008E11FF /* SignInButtons.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		0425B6742667764F00C87ED9 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +142,8 @@
 		0425B69B266776B300C87ED9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0424D9C7266B8838007BEBA7 /* Language.swift */,
+				04099EB0266BC715008E11FF /* Hear.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +151,8 @@
 		0425B69C266776CC00C87ED9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0424D9C0266B60C7007BEBA7 /* Items */,
+				04099EB2266BCCD3008E11FF /* Authentication */,
 				0425B6A42667BDC600C87ED9 /* Selection */,
 				0425B6A22667ADF700C87ED9 /* Welcome */,
 			);
@@ -120,6 +162,7 @@
 		0425B69D266776DA00C87ED9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0424D9C9266B89BF007BEBA7 /* LanguageListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -141,7 +184,7 @@
 		0425B6A22667ADF700C87ED9 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				0425B6A02667AA9C00C87ED9 /* GetStartedView.swift */,
+				04099EA8266BC1AB008E11FF /* GetStartedView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -149,8 +192,8 @@
 		0425B6A42667BDC600C87ED9 /* Selection */ = {
 			isa = PBXGroup;
 			children = (
-				0425B6A52667BDD700C87ED9 /* HearSelectionView.swift */,
-				0425B6A72667BDEB00C87ED9 /* LanguageSelectionView.swift */,
+				04099EAA266BC4BF008E11FF /* LanguageSelectionView.swift */,
+				04099EAE266BC64E008E11FF /* HearSelectionView.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -252,11 +295,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0425B6A82667BDEB00C87ED9 /* LanguageSelectionView.swift in Sources */,
 				0425B68F2667765300C87ED9 /* ContentView.swift in Sources */,
-				0425B6A12667AA9C00C87ED9 /* GetStartedView.swift in Sources */,
+				0424D9C4266B6F8D007BEBA7 /* Demo.swift in Sources */,
+				04099EB6266BCCF4008E11FF /* RegisterView.swift in Sources */,
+				04099EAD266BC551008E11FF /* CustomNavigationView.swift in Sources */,
+				0424D9C8266B8838007BEBA7 /* Language.swift in Sources */,
+				04099EAF266BC64E008E11FF /* HearSelectionView.swift in Sources */,
+				0424D9CA266B89BF007BEBA7 /* LanguageListViewModel.swift in Sources */,
+				04099EB4266BCCEC008E11FF /* LoginView.swift in Sources */,
+				0424D9BF266B5CD5007BEBA7 /* ListView.swift in Sources */,
+				04099EA9266BC1AB008E11FF /* GetStartedView.swift in Sources */,
 				0425B68D2667765300C87ED9 /* duolingoApp.swift in Sources */,
-				0425B6A62667BDD700C87ED9 /* HearSelectionView.swift in Sources */,
+				04099EB1266BC715008E11FF /* Hear.swift in Sources */,
+				04099EAB266BC4BF008E11FF /* LanguageSelectionView.swift in Sources */,
+				04099EB8266BD010008E11FF /* SignInButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
