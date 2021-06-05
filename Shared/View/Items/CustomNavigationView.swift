@@ -22,14 +22,28 @@ struct CustomNavigationView: View {
                     Image(systemName: image)
                         .resizable()
                         .frame(maxWidth: 25, maxHeight: 25)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
+                        .padding(.horizontal, 10)
                 }
-                Text(title)
-                    .font(.system(size: 35, weight: .semibold))
                 Spacer()
             }
             .padding()
+            
+            HStack {
+                Text(title)
+                    .font(.system(size: 25, weight: .semibold))
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 20)
+                Spacer()
+            }
+            
             Spacer()
         }
+    }
+}
+
+struct CustomNavigationView_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomNavigationView(title: "How did you hear about us?", image: "arrow.backward")
     }
 }

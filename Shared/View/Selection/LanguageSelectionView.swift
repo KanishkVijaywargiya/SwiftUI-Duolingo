@@ -43,7 +43,7 @@ struct LanguageSelectionView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color(#colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1)), lineWidth: 2)
             )
-            .padding(.vertical, 10)
+            .padding(.vertical, 30)
             .padding(.horizontal, 20)
             .padding(.top, 80)
             
