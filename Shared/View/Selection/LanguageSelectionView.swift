@@ -25,17 +25,7 @@ struct LanguageSelectionView: View {
             List {
                 ForEach(languages) { language in
                     NavigationLink(destination: HearSelectionView()) {
-                        HStack {
-                            Image("cover")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(maxWidth: 50, maxHeight: 50)
-                                .padding([.horizontal, .vertical], 8.0)
-                            
-                            Text("\(language.lang)")
-                                .font(.system(size: 24, weight: .semibold))
-                                .foregroundColor(language.color)
-                        }
+                        ListView(image: "cover", text: language.lang, color: language.color)
                     }
                 }
             }

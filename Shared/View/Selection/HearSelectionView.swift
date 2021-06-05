@@ -28,6 +28,7 @@ struct HearSelectionView: View {
                         Text("\(hear.text)")
                             .font(.system(size: 24, weight: .semibold))
                             .foregroundColor(hear.color)
+                            .padding([.vertical, .horizontal], 10)
                     }
                 }
             }
