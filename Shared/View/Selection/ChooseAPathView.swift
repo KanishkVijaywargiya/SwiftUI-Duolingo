@@ -77,7 +77,7 @@ struct ChooseAPathView: View {
                 )
             }
             
-            CustomNavigationView(progressValue: 1, title: "Choose a path", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: 1, title: "Choose a path", image: "arrow.backward")
         }
     }
 }

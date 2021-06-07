@@ -62,7 +62,7 @@ struct PickAGoalView: View {
                 .padding(.vertical, 80)
             }
             
-            CustomNavigationView(progressValue: 0.80, title: "Pick a goal", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: 0.80, title: "Pick a goal", image: "arrow.backward")
             
             ContinueButton2(language: language)
         }

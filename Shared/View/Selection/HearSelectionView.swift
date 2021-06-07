@@ -42,7 +42,7 @@ struct HearSelectionView: View {
             .padding(.horizontal, 20)
             .padding(.top, 80)
             
-            CustomNavigationView(progressValue: 0.32, title: "How did you hear about us?", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: 0.32, title: "How did you hear about us?", image: "arrow.backward")
         }
     }
 }
