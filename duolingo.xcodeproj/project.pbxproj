@@ -25,6 +25,15 @@
 		0425B6902667765300C87ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425B67B2667764F00C87ED9 /* ContentView.swift */; };
 		0425B6912667765300C87ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425B67C2667765200C87ED9 /* Assets.xcassets */; };
 		0425B6922667765300C87ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425B67C2667765200C87ED9 /* Assets.xcassets */; };
+		04800A21266D232F003D4539 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04800A20266D232F003D4539 /* Launch Screen.storyboard */; };
+		04800A22266D232F003D4539 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04800A20266D232F003D4539 /* Launch Screen.storyboard */; };
+		04B28E52266D02A600332B80 /* LinearProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B28E51266D02A600332B80 /* LinearProgressBar.swift */; };
+		04CEE121266E01B900CC45D0 /* WhyNewLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEE120266E01B900CC45D0 /* WhyNewLanguage.swift */; };
+		04CEE123266E02E600CC45D0 /* NewLearningLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEE122266E02E600CC45D0 /* NewLearningLanguage.swift */; };
+		04CEE125266E069500CC45D0 /* CourseOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEE124266E069500CC45D0 /* CourseOverviewView.swift */; };
+		04CEE129266E2E0600CC45D0 /* PickAGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEE128266E2E0600CC45D0 /* PickAGoalView.swift */; };
+		04CEE12B266E326100CC45D0 /* ChooseAPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEE12A266E326100CC45D0 /* ChooseAPathView.swift */; };
+		04CEE12D266E3E7000CC45D0 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEE12C266E3E7000CC45D0 /* Goal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,14 @@
 		0425B6892667765300C87ED9 /* duolingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duolingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425B68B2667765300C87ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0425B68C2667765300C87ED9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		04800A20266D232F003D4539 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		04B28E51266D02A600332B80 /* LinearProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressBar.swift; sourceTree = "<group>"; };
+		04CEE120266E01B900CC45D0 /* WhyNewLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyNewLanguage.swift; sourceTree = "<group>"; };
+		04CEE122266E02E600CC45D0 /* NewLearningLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLearningLanguage.swift; sourceTree = "<group>"; };
+		04CEE124266E069500CC45D0 /* CourseOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseOverviewView.swift; sourceTree = "<group>"; };
+		04CEE128266E2E0600CC45D0 /* PickAGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAGoalView.swift; sourceTree = "<group>"; };
+		04CEE12A266E326100CC45D0 /* ChooseAPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAPathView.swift; sourceTree = "<group>"; };
+		04CEE12C266E3E7000CC45D0 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +101,7 @@
 				0424D9C3266B6F8D007BEBA7 /* Demo.swift */,
 				04099EAC266BC551008E11FF /* CustomNavigationView.swift */,
 				04099EB7266BD010008E11FF /* SignInButtons.swift */,
+				04B28E51266D02A600332B80 /* LinearProgressBar.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -109,6 +127,7 @@
 				0425B67A2667764F00C87ED9 /* duolingoApp.swift */,
 				0425B67B2667764F00C87ED9 /* ContentView.swift */,
 				0425B67C2667765200C87ED9 /* Assets.xcassets */,
+				04800A20266D232F003D4539 /* Launch Screen.storyboard */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -144,6 +163,8 @@
 			children = (
 				0424D9C7266B8838007BEBA7 /* Language.swift */,
 				04099EB0266BC715008E11FF /* Hear.swift */,
+				04CEE120266E01B900CC45D0 /* WhyNewLanguage.swift */,
+				04CEE12C266E3E7000CC45D0 /* Goal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +215,10 @@
 			children = (
 				04099EAA266BC4BF008E11FF /* LanguageSelectionView.swift */,
 				04099EAE266BC64E008E11FF /* HearSelectionView.swift */,
+				04CEE122266E02E600CC45D0 /* NewLearningLanguage.swift */,
+				04CEE124266E069500CC45D0 /* CourseOverviewView.swift */,
+				04CEE128266E2E0600CC45D0 /* PickAGoalView.swift */,
+				04CEE12A266E326100CC45D0 /* ChooseAPathView.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -276,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04800A21266D232F003D4539 /* Launch Screen.storyboard in Resources */,
 				0425B6912667765300C87ED9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04800A22266D232F003D4539 /* Launch Screen.storyboard in Resources */,
 				0425B6922667765300C87ED9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,13 +326,20 @@
 				0424D9C4266B6F8D007BEBA7 /* Demo.swift in Sources */,
 				04099EB6266BCCF4008E11FF /* RegisterView.swift in Sources */,
 				04099EAD266BC551008E11FF /* CustomNavigationView.swift in Sources */,
+				04CEE123266E02E600CC45D0 /* NewLearningLanguage.swift in Sources */,
 				0424D9C8266B8838007BEBA7 /* Language.swift in Sources */,
+				04CEE12B266E326100CC45D0 /* ChooseAPathView.swift in Sources */,
+				04CEE121266E01B900CC45D0 /* WhyNewLanguage.swift in Sources */,
 				04099EAF266BC64E008E11FF /* HearSelectionView.swift in Sources */,
 				0424D9CA266B89BF007BEBA7 /* LanguageListViewModel.swift in Sources */,
+				04CEE129266E2E0600CC45D0 /* PickAGoalView.swift in Sources */,
 				04099EB4266BCCEC008E11FF /* LoginView.swift in Sources */,
+				04CEE125266E069500CC45D0 /* CourseOverviewView.swift in Sources */,
+				04CEE12D266E3E7000CC45D0 /* Goal.swift in Sources */,
 				0424D9BF266B5CD5007BEBA7 /* ListView.swift in Sources */,
 				04099EA9266BC1AB008E11FF /* GetStartedView.swift in Sources */,
 				0425B68D2667765300C87ED9 /* duolingoApp.swift in Sources */,
+				04B28E52266D02A600332B80 /* LinearProgressBar.swift in Sources */,
 				04099EB1266BC715008E11FF /* Hear.swift in Sources */,
 				04099EAB266BC4BF008E11FF /* LanguageSelectionView.swift in Sources */,
 				04099EB8266BD010008E11FF /* SignInButtons.swift in Sources */,
@@ -453,7 +487,7 @@
 				PRODUCT_NAME = duolingo;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,7 +509,7 @@
 				PRODUCT_NAME = duolingo;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

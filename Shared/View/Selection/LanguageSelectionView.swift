@@ -24,8 +24,8 @@ struct LanguageSelectionView: View {
             
             List {
                 ForEach(languages) { language in
-                    NavigationLink(destination: HearSelectionView()) {
-                        ListView(image: "cover", text: language.lang, color: language.color)
+                    NavigationLink(destination: HearSelectionView(language: language.lang)) {
+                        ListView(image: language.image, text: language.lang, color: language.color)
                     }
                 }
             }
@@ -37,7 +37,7 @@ struct LanguageSelectionView: View {
             .padding(.horizontal, 20)
             .padding(.top, 80)
             
-            CustomNavigationView(title: "I want to learn...", image: "arrow.backward")
+            CustomNavigationView(progressValue: 0.16, title: "I want to learn...", image: "arrow.backward")
         }
     }
 }

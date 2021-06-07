@@ -10,9 +10,11 @@ import SwiftUI
 struct HearSelectionView: View {
     @Environment(\.presentationMode) var presentationMode
     
-    init() {
-        UITableView.appearance().showsVerticalScrollIndicator = false
-    }
+    let language: String
+    
+//    init() {
+//        UITableView.appearance().showsVerticalScrollIndicator = false
+//    }
     
     var body: some View {
         ZStack {
@@ -24,7 +26,7 @@ struct HearSelectionView: View {
             
             List {
                 ForEach(hears) { hear in
-                    NavigationLink(destination: Text("Detail")) {
+                    NavigationLink(destination: NewLearningLanguage(language: language)) {
                         Text("\(hear.text)")
                             .font(.system(size: 24, weight: .semibold))
                             .foregroundColor(hear.color)
@@ -40,13 +42,13 @@ struct HearSelectionView: View {
             .padding(.horizontal, 20)
             .padding(.top, 80)
             
-            CustomNavigationView(title: "How did you hear about us?", image: "arrow.backward")
+            CustomNavigationView(progressValue: 0.32, title: "How did you hear about us?", image: "arrow.backward")
         }
     }
 }
 
 struct HearSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        HearSelectionView()
+        HearSelectionView(language: "")
     }
 }

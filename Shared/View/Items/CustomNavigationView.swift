@@ -10,6 +10,8 @@ import SwiftUI
 struct CustomNavigationView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
+    @State var progressValue: Double
+
     var title: String
     var image: String
     
@@ -25,6 +27,9 @@ struct CustomNavigationView: View {
                         .foregroundColor(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
                         .padding(.horizontal, 10)
                 }
+                
+                LinearProgressBar(value: $progressValue).frame(height: 20)
+                
                 Spacer()
             }
             .padding()
@@ -44,6 +49,6 @@ struct CustomNavigationView: View {
 
 struct CustomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomNavigationView(title: "How did you hear about us?", image: "arrow.backward")
+        CustomNavigationView(progressValue: 0.2, title: "How did you hear about us?", image: "arrow.backward")
     }
 }
