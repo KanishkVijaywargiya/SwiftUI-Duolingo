@@ -58,7 +58,7 @@ struct PickAGoalView: View {
                         .padding(.trailing, 60)
                         .padding(.bottom, 50)
                 }
-                .padding(.leading, 10)
+                .padding([.leading, .trailing], 20)
                 .padding(.vertical, 80)
             }
             
