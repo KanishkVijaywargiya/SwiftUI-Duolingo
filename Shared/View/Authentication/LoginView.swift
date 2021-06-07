@@ -50,12 +50,12 @@ struct LoginView: View {
             
             Spacer()
             
-            SignInButtons(image: "cover", text: "Sign in with google")
+            SignInButtons(image: "googleLogin", text: "Sign in with google")
             
-            SignInButtons(image: "cover", text: "Sign in with facebook")
+            SignInButtons(image: "facebookLogin", text: "Sign in with facebook")
                 .padding()
             
-            SignInButtons(image: "cover", text: "Sign in with email")
+            SignInButtons(image: "emailLogin", text: "Sign in with email")
             
             VStack {
                 Text("By signing in to Duolingo, you agree to our")
