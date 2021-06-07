@@ -18,21 +18,29 @@ struct PickAGoalView: View {
             .navigationBarHidden(true)
             Color.white.edgesIgnoringSafeArea(.all)
             
-            VStack(alignment: .leading) {
+            VStack {
                 ForEach(goals) { goal in
-                    HStack {
-                        Text(goal.text1)
-                            .padding(.leading, 8)
-                            .padding(.vertical, 20)
-                            .font(.system(size: 18, weight: .semibold))
-                        
-                        Spacer()
-                        
-                        Text(goal.text2)
-                            .padding(.trailing, 8)
-                            .font(.system(size: 18, weight: .semibold))
+                    Button(action: {}) {
+                        HStack {
+                            Text(goal.text1)
+                                .font(.system(size: 18, weight: .semibold))
+                                .foregroundColor(.black)
+                            
+                            Spacer()
+                            
+                            Text(goal.text2)
+                                .font(.system(size: 18))
+                                .foregroundColor(.black)
+                        }.padding()
+                        .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                     }
-                    Divider()
+                    .cornerRadius(10)
+                    .shadow(color: Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), radius: 1, x: 0, y: 5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.gray, lineWidth: 1.0)
+                    )
+                    .padding([.leading, .trailing], 20)
                 }
                 
                 HStack {
@@ -51,12 +59,8 @@ struct PickAGoalView: View {
                         .padding(.bottom, 50)
                 }
                 .padding(.leading, 10)
-                .padding(.vertical, 50)
-                
-                Spacer()
+                .padding(.vertical, 80)
             }
-            .padding(.top, 100)
-            .padding(.horizontal, 20)
             
             CustomNavigationView(progressValue: 0.80, title: "Pick a goal", image: "arrow.backward")
             
