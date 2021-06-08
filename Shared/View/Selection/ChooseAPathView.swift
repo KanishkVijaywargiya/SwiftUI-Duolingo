@@ -17,7 +17,6 @@ struct ChooseAPathView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack {
                 Button(action: {}) {
@@ -93,6 +92,6 @@ struct ChooseAPathView: View {
 
 struct ChooseAPathView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseAPathView(language: "Hindi")
+        ForEach(ColorScheme.allCases, id: \.self, content: ChooseAPathView(language: "Hindi").preferredColorScheme)
     }
 }

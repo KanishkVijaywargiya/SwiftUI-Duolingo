@@ -18,7 +18,6 @@ struct NewLearningLanguage: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             List {
                 ForEach(whyNewLanguage) { whyNewLanguages in
@@ -49,6 +48,7 @@ struct NewLearningLanguage: View {
 
 struct NewLearningLanguage_Previews: PreviewProvider {
     static var previews: some View {
-        NewLearningLanguage(language: "")
+        ForEach(ColorScheme.allCases, id: \.self, content: NewLearningLanguage(language: "").preferredColorScheme)
+        
     }
 }

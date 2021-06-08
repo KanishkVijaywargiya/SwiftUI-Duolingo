@@ -22,7 +22,7 @@ struct LanguageSelectionView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
+//            Color.white.edgesIgnoringSafeArea(.all)
             
             List {
                 ForEach(languages) { language in
@@ -53,6 +53,7 @@ struct LanguageSelectionView: View {
 
 struct LanguageSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        LanguageSelectionView()
+        ForEach(ColorScheme.allCases, id: \.self, content:LanguageSelectionView().preferredColorScheme)
+        
     }
 }

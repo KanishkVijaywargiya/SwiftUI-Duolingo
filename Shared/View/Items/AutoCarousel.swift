@@ -40,7 +40,7 @@ struct AutoCarousel: View {
                     }
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 500)
-                .tabViewStyle(PageTabViewStyle())
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 //                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                 .onReceive(timer, perform: { _ in
                     withAnimation {
@@ -56,6 +56,7 @@ struct AutoCarousel: View {
 
 struct AutoCarousel_Previews: PreviewProvider {
     static var previews: some View {
-        AutoCarousel()
+        ForEach(ColorScheme.allCases, id: \.self, content: AutoCarousel().preferredColorScheme)
+        
     }
 }

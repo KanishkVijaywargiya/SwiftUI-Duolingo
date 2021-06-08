@@ -17,7 +17,6 @@ struct PickAGoalView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack {
                 ForEach(goals) { goal in
@@ -77,11 +76,7 @@ struct PickAGoalView: View {
     }
 }
 
-struct PickAGoalView_Previews: PreviewProvider {
-    static var previews: some View {
-        PickAGoalView(language: "")
-    }
-}
+
 
 struct ContinueButton2: View {
     let language: String
@@ -103,5 +98,12 @@ struct ContinueButton2: View {
             .shadow(color: Color(#colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1)), radius: 1, x: 0, y: 5)
             .padding()
         }
+    }
+}
+
+struct PickAGoalView_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: PickAGoalView(language: "").preferredColorScheme)
+        
     }
 }

@@ -24,7 +24,7 @@ struct HearSelectionView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
+//            Color.white.edgesIgnoringSafeArea(.all)
             
             List {
                 ForEach(hears) { hear in
@@ -58,6 +58,7 @@ struct HearSelectionView: View {
 
 struct HearSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        HearSelectionView(language: "")
+        ForEach(ColorScheme.allCases, id: \.self, content:HearSelectionView(language: "").preferredColorScheme)
+        
     }
 }

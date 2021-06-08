@@ -13,7 +13,6 @@ struct GetStartedView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.white.edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     Spacer()
@@ -56,7 +55,7 @@ struct GetStartedView: View {
 
 struct GetStartedView_Previews: PreviewProvider {
     static var previews: some View {
-        GetStartedView()
+        ForEach(ColorScheme.allCases, id: \.self, content: GetStartedView().preferredColorScheme)
     }
 }
 

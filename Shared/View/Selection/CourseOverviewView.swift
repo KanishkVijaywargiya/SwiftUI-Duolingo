@@ -17,7 +17,6 @@ struct CourseOverviewView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .leading) {
                 Text("Lear the basics of listening, speaking, reading, writing and grammar in \(language)")
@@ -51,11 +50,7 @@ struct CourseOverviewView: View {
     }
 }
 
-struct CourseOverviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseOverviewView(language: "")
-    }
-}
+
 
 struct CourseContent: View {
     var body: some View {
@@ -70,7 +65,7 @@ struct CourseContent: View {
             
             HStack {
                 HStack {
-                    Image("icon")
+                    Image("words")
                         .resizable()
                         .scaledToFill()
                         .frame(maxWidth: 50, maxHeight: 50)
@@ -88,7 +83,7 @@ struct CourseContent: View {
                 Spacer()
                 
                 HStack {
-                    Image("icon")
+                    Image("pencil")
                         .resizable()
                         .scaledToFill()
                         .frame(maxWidth: 50, maxHeight: 50)
@@ -120,7 +115,7 @@ struct BuildYourSkills: View {
             }
             
             HStack {
-                Image("icon")
+                Image("map")
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: 50, maxHeight: 50)
@@ -132,9 +127,10 @@ struct BuildYourSkills: View {
             }
             
             HStack {
-                Image("icon")
+                Image("bulb")
                     .resizable()
                     .scaledToFill()
+                    .foregroundColor(.yellow)
                     .frame(maxWidth: 50, maxHeight: 50)
                 
                 Text("Supplement your classes to stand out in school")
@@ -144,9 +140,10 @@ struct BuildYourSkills: View {
             }
             
             HStack {
-                Image("icon")
+                Image(systemName: "arrowshape.turn.up.right.fill")
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
+                    .foregroundColor(.blue)
                     .frame(maxWidth: 50, maxHeight: 50)
                 
                 Text("Quality for jobs that accelerate your career")
@@ -178,5 +175,12 @@ struct ContinueButton: View {
             .shadow(color: Color(#colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1)), radius: 1, x: 0, y: 5)
             .padding()
         }
+    }
+}
+
+
+struct CourseOverviewView_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: CourseOverviewView(language: "").preferredColorScheme)
     }
 }

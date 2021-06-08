@@ -20,7 +20,7 @@ struct LoginView: View {
                         .resizable()
                         .frame(maxWidth: 20, maxHeight: 20)
                         .padding(.horizontal, 10)
-                        .foregroundColor(.black)
+                        .foregroundColor(.gray)
                 }
                 
                 Spacer()
@@ -74,6 +74,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        ForEach(ColorScheme.allCases, id: \.self, content: LoginView().preferredColorScheme)
+        
     }
 }
