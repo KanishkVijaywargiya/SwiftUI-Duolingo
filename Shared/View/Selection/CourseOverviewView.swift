@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CourseOverviewView: View {
+    @State var progressBarValue: Double = 0.48
     let language: String
     
     var body: some View {
@@ -38,7 +39,14 @@ struct CourseOverviewView: View {
             
             ContinueButton(language: language)
             
-            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: 0.64, title: "Course overview", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: $progressBarValue, title: "Course overview", image: "arrow.backward")
+        }.onAppear {
+            Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+                self.progressBarValue += 0.16
+                if (self.progressBarValue >= 0.64) {
+                    timer.invalidate()
+                }
+            }
         }
     }
 }

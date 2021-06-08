@@ -25,4 +25,10 @@ struct LinearProgressBar: View {
             }.cornerRadius(45.0)
         }
     }
+    
+    func start() {
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+            self.value += 0.16
+        }
+    }
 }

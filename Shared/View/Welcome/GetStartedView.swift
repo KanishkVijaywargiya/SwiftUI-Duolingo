@@ -63,23 +63,14 @@ struct GetStartedView_Previews: PreviewProvider {
 struct LogoTextView: View {
     var body: some View {
         VStack {
-            Image("cover")
+            Image("logo")
                 .resizable()
                 .scaledToFill()
-                .frame(maxWidth: 180, maxHeight: 180)
-                .padding(.bottom, 8.0)
+                .frame(width: 80, height: 80)
             
-            Text("Learn a language for free.")
-                .font(.system(size: 25, weight: .light))
-                .foregroundColor(.secondary)
-                .padding(.bottom, 6.0)
-            
-            Text("Forever.")
-                .font(.system(size: 25, weight: .light))
-                .foregroundColor(.secondary)
+            AutoCarousel()
             
             Spacer()
-        }
-        .padding(.top, 100)
+        }.padding(.top, 20)
     }
 }
