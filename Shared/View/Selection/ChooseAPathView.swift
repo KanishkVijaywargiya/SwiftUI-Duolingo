@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChooseAPathView: View {
+    @State var progressBarValue: Double = 0.80
     let language: String
     
     var body: some View {
@@ -16,7 +17,6 @@ struct ChooseAPathView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack {
                 Button(action: {}) {
@@ -77,13 +77,21 @@ struct ChooseAPathView: View {
                 )
             }
             
-            CustomNavigationView(progressValue: 1, title: "Choose a path", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: $progressBarValue, title: "Choose a path", image: "arrow.backward")
+            
+        }.onAppear {
+            Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+                self.progressBarValue += 0.2
+                if (self.progressBarValue >= 1) {
+                    timer.invalidate()
+                }
+            }
         }
     }
 }
 
 struct ChooseAPathView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseAPathView(language: "Hindi")
+        ForEach(ColorScheme.allCases, id: \.self, content: ChooseAPathView(language: "Hindi").preferredColorScheme)
     }
 }

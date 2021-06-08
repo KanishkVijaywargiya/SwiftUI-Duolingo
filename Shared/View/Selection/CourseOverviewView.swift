@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CourseOverviewView: View {
+    @State var progressBarValue: Double = 0.48
     let language: String
     
     var body: some View {
@@ -16,7 +17,6 @@ struct CourseOverviewView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .leading) {
                 Text("Lear the basics of listening, speaking, reading, writing and grammar in \(language)")
@@ -38,16 +38,19 @@ struct CourseOverviewView: View {
             
             ContinueButton(language: language)
             
-            CustomNavigationView(progressValue: 0.64, title: "Course overview", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: $progressBarValue, title: "Course overview", image: "arrow.backward")
+        }.onAppear {
+            Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+                self.progressBarValue += 0.16
+                if (self.progressBarValue >= 0.64) {
+                    timer.invalidate()
+                }
+            }
         }
     }
 }
 
-struct CourseOverviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseOverviewView(language: "")
-    }
-}
+
 
 struct CourseContent: View {
     var body: some View {
@@ -62,7 +65,7 @@ struct CourseContent: View {
             
             HStack {
                 HStack {
-                    Image("icon")
+                    Image("words")
                         .resizable()
                         .scaledToFill()
                         .frame(maxWidth: 50, maxHeight: 50)
@@ -80,7 +83,7 @@ struct CourseContent: View {
                 Spacer()
                 
                 HStack {
-                    Image("icon")
+                    Image("pencil")
                         .resizable()
                         .scaledToFill()
                         .frame(maxWidth: 50, maxHeight: 50)
@@ -112,7 +115,7 @@ struct BuildYourSkills: View {
             }
             
             HStack {
-                Image("icon")
+                Image("map")
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: 50, maxHeight: 50)
@@ -124,9 +127,10 @@ struct BuildYourSkills: View {
             }
             
             HStack {
-                Image("icon")
+                Image("bulb")
                     .resizable()
                     .scaledToFill()
+                    .foregroundColor(.yellow)
                     .frame(maxWidth: 50, maxHeight: 50)
                 
                 Text("Supplement your classes to stand out in school")
@@ -136,9 +140,10 @@ struct BuildYourSkills: View {
             }
             
             HStack {
-                Image("icon")
+                Image(systemName: "arrowshape.turn.up.right.fill")
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
+                    .foregroundColor(.blue)
                     .frame(maxWidth: 50, maxHeight: 50)
                 
                 Text("Quality for jobs that accelerate your career")
@@ -170,5 +175,12 @@ struct ContinueButton: View {
             .shadow(color: Color(#colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1)), radius: 1, x: 0, y: 5)
             .padding()
         }
+    }
+}
+
+
+struct CourseOverviewView_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: CourseOverviewView(language: "").preferredColorScheme)
     }
 }

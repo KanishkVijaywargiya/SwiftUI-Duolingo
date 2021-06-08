@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LinearProgressBar: View {
     @Binding var value: Double
+    @State var color: Color
     
     var body: some View {
         GeometryReader { geometry in
@@ -19,9 +20,15 @@ struct LinearProgressBar: View {
                 
                 Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width)
                                   , height: geometry.size.height)
-                    .foregroundColor(Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)))
+                    .foregroundColor(color)
                     .animation(.linear)
             }.cornerRadius(45.0)
+        }
+    }
+    
+    func start() {
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+            self.value += 0.16
         }
     }
 }

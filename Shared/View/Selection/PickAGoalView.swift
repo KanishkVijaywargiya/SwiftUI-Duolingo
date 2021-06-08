@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PickAGoalView: View {
+    @State var progressBarValue: Double = 0.64
     let language: String
     
     var body: some View {
@@ -16,7 +17,6 @@ struct PickAGoalView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack {
                 ForEach(goals) { goal in
@@ -62,18 +62,21 @@ struct PickAGoalView: View {
                 .padding(.vertical, 80)
             }
             
-            CustomNavigationView(progressValue: 0.80, title: "Pick a goal", image: "arrow.backward")
+            CustomNavigationView(progressColor: Color(#colorLiteral(red: 0.537254902, green: 0.8862745098, blue: 0.09803921569, alpha: 1)), progressValue: $progressBarValue, title: "Pick a goal", image: "arrow.backward")
             
             ContinueButton2(language: language)
+        }.onAppear {
+            Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
+                self.progressBarValue += 0.16
+                if (self.progressBarValue >= 0.80) {
+                    timer.invalidate()
+                }
+            }
         }
     }
 }
 
-struct PickAGoalView_Previews: PreviewProvider {
-    static var previews: some View {
-        PickAGoalView(language: "")
-    }
-}
+
 
 struct ContinueButton2: View {
     let language: String
@@ -95,5 +98,12 @@ struct ContinueButton2: View {
             .shadow(color: Color(#colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1)), radius: 1, x: 0, y: 5)
             .padding()
         }
+    }
+}
+
+struct PickAGoalView_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: PickAGoalView(language: "").preferredColorScheme)
+        
     }
 }
