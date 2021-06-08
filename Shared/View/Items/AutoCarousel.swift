@@ -22,7 +22,7 @@ struct AutoCarousel: View {
         }
         .padding(.vertical, 10)
         .padding(.horizontal, 16)
-        .background(Color(#colorLiteral(red: 0.9607002139, green: 0.9608381391, blue: 0.9606701732, alpha: 1)))
+//        .background(Color(#colorLiteral(red: 0.9607002139, green: 0.9608381391, blue: 0.9606701732, alpha: 1)))
         .clipShape(RoundedRectangle(cornerRadius: 25))
     }
     
