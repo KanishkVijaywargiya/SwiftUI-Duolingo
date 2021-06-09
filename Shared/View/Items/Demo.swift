@@ -68,9 +68,12 @@ struct DestinationView2: View {
             .navigationBarHidden(true)
             Color.green.edgesIgnoringSafeArea(.all)
             
-            Text("We are at the destination")
-                .font(.system(size: 24, weight: .semibold))
-                .foregroundColor(.black)
+            NavigationLink(
+                destination: CustomNavigationView3()) {
+                Text("We are at the destination")
+                    .font(.system(size: 24, weight: .semibold))
+                    .foregroundColor(.black)
+            }
             
             CustomNavigationView2(title: "How")
         }
@@ -99,6 +102,14 @@ struct CustomNavigationView2: View {
             }
             .padding()
             Spacer()
+        }
+    }
+}
+
+struct CustomNavigationView3: View {
+    var body: some View {
+        VStack {
+            Text("Tool tip design")
         }
     }
 }

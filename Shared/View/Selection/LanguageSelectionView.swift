@@ -22,7 +22,6 @@ struct LanguageSelectionView: View {
                 Text("")
             }
             .navigationBarHidden(true)
-//            Color.white.edgesIgnoringSafeArea(.all)
             
             List {
                 ForEach(languages) { language in

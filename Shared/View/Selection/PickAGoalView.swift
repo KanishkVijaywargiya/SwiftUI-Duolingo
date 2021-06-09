@@ -55,7 +55,7 @@ struct PickAGoalView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: 100, height: 100)
-                        .padding(.trailing, 60)
+                        .padding(.trailing, 70)
                         .padding(.bottom, 50)
                 }
                 .padding([.leading, .trailing], 20)
