@@ -53,12 +53,6 @@ struct GetStartedView: View {
     }
 }
 
-struct GetStartedView_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self, content: GetStartedView().preferredColorScheme)
-    }
-}
-
 struct LogoTextView: View {
     var body: some View {
         VStack {
@@ -71,5 +65,11 @@ struct LogoTextView: View {
             
             Spacer()
         }.padding(.top, 20)
+    }
+}
+
+struct GetStartedView_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: GetStartedView().preferredColorScheme)
     }
 }
