@@ -8,12 +8,6 @@
 import SwiftUI
 
 struct CelebrationDemo: View {
-    var body: some View {
-        Celebrate()
-    }
-}
-
-struct Celebrate: View {
     @State var celebrate = false
     @State var finishCelebrate = false
     
